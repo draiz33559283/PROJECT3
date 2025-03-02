@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENISH OMONDI OSONGO | IT Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --cyber-teal: #00f3ff;
+            --neon-purple: #bc13fe;
+            --matrix-green: #00ff41;
+            --dark-bg: #0a192f;
+            --accent-red: #ff4655;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--dark-bg);
+            color: #ccd6f6;
+        }
+
+        /* Cyber-style Header */
+        header {
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--cyber-teal);
+        }
+
+        nav a {
+            color: #ccd6f6;
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 600;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent-red);
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Glowing Hero Section */
+        .hero {
+            padding: 15rem 5% 8rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(45deg, 
+                transparent 45%,
+                var(--neon-purple) 50%,
+                transparent 55%);
+            animation: cyber-glitch 4s infinite linear;
+            opacity: 0.1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--cyber-teal), var(--matrix-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--matrix-green);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Tech Services Grid */
+        .services {
+            padding: 6rem 5%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-item {
+            padding: 2.5rem;
+            border-radius: 8px;
+            transition: 0.4s all;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 243, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.2);
+            border-color: var(--cyber-teal);
+        }
+
+        .service-item i {
+            color: var(--cyber-teal);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-item h3 {
+            color: var(--matrix-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Technical Portfolio */
+        .portfolio {
+            padding: 6rem 5%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            height: 320px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid rgba(0, 243, 255, 0.1);
+            transition: 0.3s all;
+        }
+
+        .portfolio-item:hover {
+            border-color: var(--cyber-teal);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--cyber-teal);
+            font-size: 2rem;
+            margin: 0 1.5rem;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--matrix-green);
+        }
+
+        @keyframes cyber-glitch {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--cyber-teal);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>DENISH OMONDI OSONGO</h1>
+        <p class="tagline">Enterprise IT Solutions Architect</p>
+        <p class="tagline">Specializing in Secure System Infrastructure</p>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-network-wired"></i>
+                <h3>Network Engineering & Administration</h3>
+                <p>Enterprise network design, implementation, and security hardening</p>
+                <p>Cisco | Juniper | Fortinet | SD-WAN Solutions</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-database"></i>
+                <h3>Database Management Systems</h3>
+                <p>MySQL | PostgreSQL | MongoDB Administration</p>
+                <p>Performance Tuning & Disaster Recovery</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-server"></i>
+                <h3>Systems Architecture</h3>
+                <p>Windows/Linux Server Deployment</p>
+                <p>Cloud Integration & Containerization</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Technical Implementations</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" style="background: linear-gradient(45deg, #001220, #0a192f);">
+                <div class="project-info">
+                    <h4>Network Infrastructure Design</h4>
+                    <p>Enterprise-grade network solution</p>
+                </div>
+            </div>
+            <div class="portfolio-item" style="background: linear-gradient(45deg, #001220, #0a192f);">
+                <div class="project-info">
+                    <h4>Cloud Database Migration</h4>
+                    <p>AWS RDS implementation</p>
+                </div>
+            </div>
+            <div class="portfolio-item" style="background: linear-gradient(45deg, #001220, #0a192f);">
+                <div class="project-info">
+                    <h4>Security Hardening</h4>
+                    <p>Enterprise firewall configuration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+<section class="contact" id="contact">
+    <h2 class="section-title">Connect With Me</h2>
+    <div class="social-links">
+        <a href="tel:+254790080461" title="Phone Call">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/254790080461" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:draizosongo@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/draiz33559283?tab=repositories" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/denish-omondi-272606280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+    <div class="contact-details">
+        <p style="margin-top: 1.5rem; color: var(--cyber-teal);">
+            Direct: <a href="tel:+254790080461" style="color: var(--matrix-green);">+254 790 080 461</a>
+        </p>
+        <p style="color: var(--cyber-teal);">
+            Email: <a href="draizosongo@gmail.com" style="color: var(--matrix-green);">draizosongo@gmail.com</a>
+        </p>
+    </div>
+</section>
+  
+        </div>
+    </section>
+</body>
+</html>
